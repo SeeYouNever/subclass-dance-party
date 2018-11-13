@@ -17,13 +17,12 @@ $(document).ready(function() {
      */
     // console.log($(this)[0].dataset.dancerMakerFunctionName); // this evaluates to makeBlinkyDancer
     var dancerMakerFunctionName = $(this)[0].dataset.dancerMakerFunctionName;
-    console.log('bob', dancerMakerFunctionName)
+    //console.log('bob', dancerMakerFunctionName)
+    
     // get the maker function for the kind of dancer we're supposed to make
     //var dancerMakerFunction = window[dancerMakerFunctionName];
     
-    var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(makeBlinkyDancer, dancerMakerFunction)
-    // make a dancer with a random position
+    var dancerMakerFunction = window[dancerMakerFunctionName]; //dynamically allows access to a dancer function  
 
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
@@ -32,5 +31,28 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+  
+  
+ 
+ $('.addWhiteDot').on('click', function (event) {
+  var whiteDotString = $(this)[0].dataset.dancerMakerFunctionName;
+  console.log('dancerMakerFunctionName', $(this)[0].dataset.dancerMakerFunctionName)
+  
+  
+  var dancerMakerFunction = window[whiteDotString]; //dynamically allows access to a dancer function  
+  console.log('dancerMakerFunction', dancerMakerFunction);
+  console.log('window', window)
+
+  var dancer = new dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+  
+    $('body').append(dancer.$node);
+ }) 
+  
+  
+  
 });
 

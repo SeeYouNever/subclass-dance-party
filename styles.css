@@ -25,3 +25,13 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.addWhiteDot{
+  border:10px solid white;
+  border-radius:10px;
+  position:absolute;
+}
+.addWhiteDancer{
+  border:10px solid white;
+  border-radius:10px;
+  position:absolute;
+}

@@ -35,15 +35,19 @@
 // Our implementation is below
 var makeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
-  this.step();
-  this.setPosition(top, left);
+  //this.step();
+  //this.setPosition(top, left);
   this.timeBetweenSteps = timeBetweenSteps;
 }
+
+
+
 
 makeDancer.prototype.step = function() {
   var dancerContext = this
   setTimeout(makeDancer.prototype.step.bind(dancerContext), this.timeBetweenSteps); //try it normally with setTimeout(this, timeBetweenSteps)
 }
+
 
 
 

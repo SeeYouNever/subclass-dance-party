@@ -3,13 +3,16 @@ body, html{
 }
 body{
   margin: 0px;
+  background-image:url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/JETFf6K/disco-dance-floor-wall-b02f-4k_v2uoablpe__F0000.png');
+  background-size:cover;
+  background-position: absolute;
   background-color:#444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addWhiteDot{
   padding:5px 12px;
   float:right;
 }
@@ -21,17 +24,15 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
 }
-.addWhiteDot{
-  border:10px solid white;
-  border-radius:10px;
+.cat{
+  max-width: 100px;
+  max-height: 200px;
   position:absolute;
 }
-.addWhiteDancer{
-  border:10px solid white;
-  border-radius:10px;
+.dog{
+  max-width: 100px;
+  max-height: 200px;
   position:absolute;
 }

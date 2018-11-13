@@ -42,9 +42,7 @@ makeBlinkyDancer.prototype.step = function() {
   
   //set oldStep equal to the 'step' function bound to the parent class 'makeDancer'
 // makeDancer.prototype.step;
-  console.log(this);
   this.oldStep();
   this.$node.toggle();
-  console.log(1);
 }
 

@@ -50,7 +50,31 @@ $(document).ready(function() {
     );
   
     $('body').append(dancer.$node);
- }) 
+ })
+ 
+$(".line-up").on('click', function(event) {
+  var dancers = document.getElementsByClassName('dancer')
+  console.log(dancers)
+  
+  for (var i =0; i < dancers.length; i++) {
+    dancers[i].style.top = "350px"
+  }
+  
+  var numOfDancers = dancers.length;
+  var docWidth = $(document).width();
+  console.log('docWidth', docWidth)
+  
+  var spacing = docWidth / numOfDancers;
+  console.log('spacing', spacing)
+  var interval = spacing;
+  
+  // debugger;
+  for (var j =0; j < dancers.length; j++) {
+    dancers[j].style.left = interval.toString() + "px"
+    interval = (interval + spacing)
+  }
+   
+}) 
   
   
   

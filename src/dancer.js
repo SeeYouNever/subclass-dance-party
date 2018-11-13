@@ -34,7 +34,7 @@
 
 // Our implementation is below
 var makeDancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span class="dancer dog"><img class = "dog" src = "https://orig00.deviantart.net/fe46/f/2017/049/4/3/excuse_me_pardon_me_by_baying-dazkh6o.gif" width="80px" height="120px"></span>');
   this.step();
   this.setPosition(top, left);
   this.timeBetweenSteps = timeBetweenSteps;
@@ -46,7 +46,10 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 makeDancer.prototype.step = function() {
   var dancerContext = this;
   // console.log(dancerContext)
-  setTimeout(makeDancer.prototype.step.bind(dancerContext), this.timeBetweenSteps); //try it normally with setTimeout(this, timeBetweenSteps)
+  //changing makeDancer.prototype to 'this' keeps the context of the bind from makeDancer to blinkyDancer.
+
+  //setTimeout(this.step.bind(dancerContext), this.timeBetweenSteps);
+  // setTimeout(makeDancer.prototype.step.bind(dancerContext), this.timeBetweenSteps); //try it normally with setTimeout(this, timeBetweenSteps)
 }
 
 

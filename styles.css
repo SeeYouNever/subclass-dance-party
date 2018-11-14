@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image:url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/JETFf6K/disco-dance-floor-wall-b02f-4k_v2uoablpe__F0000.png');
+  background-image:url('https://media.giphy.com/media/1lRrsraIsEYRW/giphy.gif');
   background-size:cover;
   background-position: absolute;
   background-color:#444;
@@ -12,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .addWhiteDot, .birdButton{
+.title, .addDancerButton, .addWhiteDot, .birdButton, .cloudButton{
   padding:5px 12px;
   float:right;
 }

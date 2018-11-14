@@ -48,9 +48,11 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-  
+    
     $('body').append(dancer.$node);
+    
  })
+
  
  
  
@@ -59,7 +61,7 @@ $(".line-up").on('click', function(event) {
   console.log(dancers)
   
   for (var i =0; i < dancers.length; i++) {
-    dancers[i].style.top = "350px"
+    dancers[i].style.top = "750px"
   }
   
   var numOfDancers = dancers.length;
@@ -73,7 +75,7 @@ $(".line-up").on('click', function(event) {
   // debugger;
   for (var j =0; j < dancers.length; j++) {
     dancers[j].style.left = interval.toString() + "px"
-    interval = (interval + spacing)
+    interval = (interval + spacing);
   }
    
 }) 
@@ -82,7 +84,6 @@ $(".line-up").on('click', function(event) {
     var birdOnly = $(".bird");
     var makeBirdsString = $(this)[0].dataset.dancerMakerFunctionName;
     var makeBirdsFunction = window[makeBirdsString];
-    console.log(window.dancers);
     
     
     
@@ -96,5 +97,21 @@ $(".line-up").on('click', function(event) {
   });
 
 
-});
+});  
+$(".cloudButton").on("click", function(event) {
+    var birdOnly = $(".cloud");
+    var makeBirdsString = $(this)[0].dataset.dancerMakerFunctionName;
+    var makeBirdsFunction = window[makeBirdsString];
+
+    
+    
+    
+    var bird = new makeBirdsFunction( 50, 
+    $("body").width() * Math.random()
+    );
+
+    $('body').append(bird.$node);
+    
+  });
+
 

@@ -52,6 +52,8 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
  })
  
+ 
+ 
 $(".line-up").on('click', function(event) {
   var dancers = document.getElementsByClassName('dancer')
   console.log(dancers)
@@ -75,8 +77,24 @@ $(".line-up").on('click', function(event) {
   }
    
 }) 
-  
-  
-  
+  $(".birdButton").on("click", function(event) {
+
+    var birdOnly = $(".bird");
+    var makeBirdsString = $(this)[0].dataset.dancerMakerFunctionName;
+    var makeBirdsFunction = window[makeBirdsString];
+    console.log(window.dancers);
+    
+    
+    
+    
+    var bird = new makeBirdsFunction( 200, 
+    $("body").width() * Math.random()
+    );
+    
+    $('body').append(bird.$node);
+    
+  });
+
+
 });
 

@@ -26,23 +26,12 @@ var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
 
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
-
-//goal is to call step / makeDancers step
-
-console.log('bob', makeDancer.prototype)
-
-makeBlinkyDancer.prototype.oldStep = makeDancer.prototype.step;
-
-// console.log(makeBlinkyDancer.prototype.oldStep)
+makeBlinkyDancer.prototype.oldStep = makeDancer.prototype.step; //this sets an oldstep property that refers back to makeDancer.prototype.step
 
 makeBlinkyDancer.prototype.step = function() {
-  
-  //set oldStep equal to the 'step' function bound to the parent class 'makeDancer'
-// makeDancer.prototype.step;
   this.oldStep();
-  this.$node.toggle();
+  this.$node.toggle();  
 }
 

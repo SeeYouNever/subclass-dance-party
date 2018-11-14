@@ -12,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .addWhiteDot{
+.title, .addDancerButton, .addWhiteDot, .birdButton{
   padding:5px 12px;
   float:right;
 }
@@ -36,3 +36,26 @@ body, a:link, a:visited, a:active{
   max-height: 200px;
   position:absolute;
 }
+.bird{
+  width: 100 px;
+  height: 150px;
+  position: absolute;
+}
+.bird:hover {  
+  transition: 1.70s;
+  -webkit-transition: 1.70s;
+  -webkit-transform: rotate(360deg);
+/*  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);*/
+  transform: rotate(360deg);
+  
+}
+
+
+
+
+
+
+
+
